@@ -11,18 +11,71 @@
         <scene sceneID="LnW-gQ-gF5">
             <objects>
                 <tableViewController id="bam-kJ-ppm" customClass="MainViewController" customModule="MyPlaceEatSafer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mmD-Oe-8bm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mmD-Oe-8bm">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Vcf-Jj-sdi">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Vcf-Jj-sdi" customClass="CustomTableViewCell" customModule="MyPlaceEatSafer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vcf-Jj-sdi" id="E1P-me-LdA">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jun-sY-fV8">
+                                            <rect key="frame" x="15" y="15" width="95" height="95"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="95" id="T3O-Bp-PdY"/>
+                                                <constraint firstAttribute="width" constant="95" id="kOP-BA-71j"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwa-OC-pvc">
+                                            <rect key="frame" x="120" y="10" width="260" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="QV5-FD-HeD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTH-Ej-VDz">
+                                            <rect key="frame" x="120" y="85" width="260" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="hjJ-VJ-aRv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="12"/>
+                                            <color key="textColor" systemColor="systemGray3Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-Fx-QTO">
+                                            <rect key="frame" x="120" y="58" width="250" height="17"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                            <color key="textColor" systemColor="systemGray2Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="TTH-Ej-VDz" secondAttribute="bottom" constant="20" id="1QF-VV-66B"/>
+                                        <constraint firstItem="Jun-sY-fV8" firstAttribute="leading" secondItem="E1P-me-LdA" secondAttribute="leading" constant="15" id="Bpa-40-fZ2"/>
+                                        <constraint firstItem="zwa-OC-pvc" firstAttribute="leading" secondItem="Jun-sY-fV8" secondAttribute="trailing" constant="10" id="CMk-DI-Zdz"/>
+                                        <constraint firstItem="TTH-Ej-VDz" firstAttribute="top" secondItem="oeI-Fx-QTO" secondAttribute="bottom" constant="10" id="Cy3-Fp-Hqm"/>
+                                        <constraint firstItem="oeI-Fx-QTO" firstAttribute="leading" secondItem="Jun-sY-fV8" secondAttribute="trailing" constant="10" id="M2Q-2Z-hIO"/>
+                                        <constraint firstItem="oeI-Fx-QTO" firstAttribute="top" secondItem="zwa-OC-pvc" secondAttribute="bottom" constant="20" id="RVW-sQ-qKc"/>
+                                        <constraint firstItem="Jun-sY-fV8" firstAttribute="centerY" secondItem="E1P-me-LdA" secondAttribute="centerY" id="XPo-NG-Yxb"/>
+                                        <constraint firstItem="zwa-OC-pvc" firstAttribute="top" secondItem="E1P-me-LdA" secondAttribute="top" constant="10" id="Yk4-oz-mbd"/>
+                                        <constraint firstAttribute="trailing" secondItem="oeI-Fx-QTO" secondAttribute="trailing" constant="20" id="cRA-RA-1Ut"/>
+                                        <constraint firstAttribute="trailing" secondItem="zwa-OC-pvc" secondAttribute="trailing" constant="10" id="eze-zP-RgA"/>
+                                        <constraint firstItem="TTH-Ej-VDz" firstAttribute="leading" secondItem="Jun-sY-fV8" secondAttribute="trailing" constant="10" id="nxk-P1-9ad"/>
+                                        <constraint firstAttribute="trailing" secondItem="TTH-Ej-VDz" secondAttribute="trailing" constant="10" id="xhi-vS-SiR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfPlace" destination="Jun-sY-fV8" id="xe7-90-Z4y"/>
+                                    <outlet property="locationLabel" destination="oeI-Fx-QTO" id="Ae6-b3-pOQ"/>
+                                    <outlet property="nameLabel" destination="zwa-OC-pvc" id="VGt-ca-jz2"/>
+                                    <outlet property="typeLabel" destination="TTH-Ej-VDz" id="bhz-aZ-0yM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,7 +87,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZu-Nl-0Lz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="84"/>
+            <point key="canvasLocation" x="1144.6153846153845" y="83.886255924170612"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dft-zC-3Kd">
@@ -60,6 +113,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
