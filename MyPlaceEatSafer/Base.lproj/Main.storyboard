@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Places-->
         <scene sceneID="LnW-gQ-gF5">
             <objects>
                 <tableViewController id="bam-kJ-ppm" customClass="MainViewController" customModule="MyPlaceEatSafer" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="bam-kJ-ppm" id="ajw-bm-o3Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Lwn-LP-2LG"/>
+                    <navigationItem key="navigationItem" title="My Places" id="Lwn-LP-2LG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZu-Nl-0Lz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,6 +43,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ay5-d5-9rp">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="46"/>
+                            <color key="textColor" systemColor="systemGreenColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="bam-kJ-ppm" kind="relationship" relationship="rootViewController" id="g9W-rX-bv1"/>
@@ -56,6 +60,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
